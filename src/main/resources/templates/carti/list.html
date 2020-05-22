@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Proiectul 1 MDS</title>
+</head>
+<body>
+
+<h1>Lista de carti</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Titlu</th>
+        <th>Editura</th>
+    </tr>
+    <tr th:each="carte : ${carti}">
+        <td th:text = "${carte.id}">123</td>
+        <td th:text = "${carte.titlu}">test spring</td>
+        <td th:text = "${carte.editura.nume}">abcd</td>
+    </tr>
+</table>
+
+</body>
+</html>
